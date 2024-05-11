@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+    <title>DATA ?</title>
+  </head>
+
+  <body>
+    <h2>go fetch</h2>
+    <fieldset>
+      <h3 class="a">national parks</h3>
+      <button id="nps">FETCH</button>
+    </fieldset>
+    <fieldset>
+      <h3 class="a">tarot</h3>
+      <button id="tarot">FETCH</button>
+      <span id="tarotSpan"></span>
+      <p id="tarotP"></p>
+    </fieldset>
+    <fieldset>
+      <h3 class="a">mtg</h3>
+      <button id="magic">FETCH</button>
+      <img src="" alt="" id="magicImg" />
+    </fieldset>
+  </body>
+  <script defer>
+    document.querySelector("#tarot").addEventListener("click", getTarot());
+    document.querySelector("#nps").addEventListener("click", getMagic());
+    //  document.querySelector("#poke").addEventListener("click");
+
+    function getTarot() {
+      fetch("https://tarotapi.dev/api/v1/cards/random?n=1")
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data.desc);
+        });
+    }
+
+    function getMagic() {
+      fetch("https://api.magicthegathering.io/v1/cards.imageUrl")
+        .then((res) => res.json)
+        .then((data) => {
+          console.log(data);
+          document.getElementById("magicImg").src = data.imageUrl;
+        });
+    }
+
+    function getPoke() {}
+  </script>
+  <footer>
+    <a href="index.html"
+      ><button title="HOME" type="button" class="home-button">HOME</button></a
+    >
+  </footer>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      description="Portfolio for Ripley Olesko, Web Developer and Writer. Browse website demos, writing samples, and personal tidbits."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <title>DATA PAD</title>
+  </head>
+  <body>
+    <main>
+      <aside>
+        <div class="tooltip-container" id="writing-tooltip">
+          <p>
+            A short portfolio of writing by yours truly, from fiction to poetry
+            to maybe some hidden stuff, who knows!
+          </p>
+        </div>
+        <div class="tooltip-container" id="webs-tooltip">
+          <p>
+            This page contains website recommendations, things on the web I use
+            a lot, and stuff I thought was cool. None of them are mine, it's
+            just my little dragon hoard of websites.
+          </p>
+        </div>
+        <div class="tooltip-container" id="cat-tooltip">
+          <p>
+            Pictures of my cat. Everyone deserves to see them. Her name is Nim,
+            sometimes known as Nimothy, Nimberly, Nimona, and Nimmy.
+          </p>
+        </div>
+        <div class="tooltip-container" id="loved-tooltip">
+          <p>
+            This is a collection of miscellaneous things about me. Games and TV
+            I like, good books, and personal projects.
+          </p>
+        </div>
+        <div class="tooltip-container" id="click-tooltip">
+          <p>This button does nothing but make a nice clicky noise. Enjoy :}</p>
+        </div>
+        <div class="tooltip-container" id="quiz-tooltip">
+          <p>
+            Enter to take a quiz that will tell you accurate and true things
+            about yourself! It's real and very true! Also it is not done yet!
+          </p>
+        </div>
+        <div class="tooltip-container" id="data-tooltip">
+          <p>
+            This page contains fun little APIs and data gimmicks such as random
+            Tarot Card API, and NPS random picture generator.
+          </p>
+        </div>
+        <div class="tooltip-container" id="contact-tooltip">
+          <p>If you want to talk to me for some reason, use this page!</p>
+        </div>
+        <div class="tooltip-container" id="nothing-tooltip">
+          <p>Nothing here- yet. Let that be as ominous as you want.</p>
+        </div>
+      </aside>
+      <h1 id="padtitle">DATA PAD</h1>
+      <nav>
+        <div>
+          <a href="writing.html"
+            ><button title="WRITING" type="button" id="writing-button"></button
+          ></a>
+        </div>
+        <a href="webs.html"
+          ><button title="WEBS" type="button" id="webs-button"></button
+        ></a>
+        <a href="cat.html"
+          ><button title="MY CAT" type="button" id="cat-button"></button
+        ></a>
+        <a href="loved.html"
+          ><button title="LOVE BUTTON" type="button" id="loved-button"></button
+        ></a>
+        <button
+          title="FOR THE CLICK OF IT"
+          type="button"
+          id="click-button"
+          class="inactive"
+        ></button>
+        <a href="#"
+          ><button
+            title="QUIZ (coming soon)"
+            type="button"
+            class="inactive"
+            id="quiz-button"
+          ></button
+        ></a>
+        <a href="data.html"
+          ><button
+            title="DATA GIMMICK"
+            type="button"
+            id="data-button"
+          ></button></a
+        ><br />
+        <button
+          title="CONTACT"
+          type="button"
+          class="inactive"
+          id="contact-button"
+        ></button>
+        <button
+          title="[REDACTED]"
+          type="button"
+          class="inactive"
+          id="nothing-button"
+        ></button>
+      </nav>
+    </main>
+  </body>
+  <script>
+    // selecting the elements for which we want to add a tooltip
+    const target = document.getElementById("writing-button");
+    const tooltip = document.getElementById("writing-tooltip");
+
+    // change display to 'block' on mouseover
+    target.addEventListener(
+      "mouseover",
+      () => {
+        tooltip.style.display = "block";
+      },
+      false
+    );
+
+    // change display to 'none' on mouseleave
+    target.addEventListener(
+      "mouseleave",
+      () => {
+        tooltip.style.display = "none";
+      },
+      false
+    );
+
+    const webby = document.getElementById("webs-button");
+    const webtip = document.getElementById("webs-tooltip");
+
+    webby.addEventListener(
+      "mouseover",
+      () => {
+        webtip.style.display = "block";
+      },
+      false
+    );
+
+    webby.addEventListener(
+      "mouseleave",
+      () => {
+        webtip.style.display = "none";
+      },
+      false
+    );
+
+    const cat = document.getElementById("cat-button");
+    const cattip = document.getElementById("cat-tooltip");
+
+    cat.addEventListener(
+      "mouseover",
+      () => {
+        cattip.style.display = "block";
+      },
+      false
+    );
+
+    cat.addEventListener(
+      "mouseleave",
+      () => {
+        cattip.style.display = "none";
+      },
+      false
+    );
+
+    const love = document.getElementById("loved-button");
+    const lovetip = document.getElementById("loved-tooltip");
+
+    love.addEventListener(
+      "mouseover",
+      () => {
+        lovetip.style.display = "block";
+      },
+      false
+    );
+
+    love.addEventListener(
+      "mouseleave",
+      () => {
+        lovetip.style.display = "none";
+      },
+      false
+    );
+
+    const click = document.getElementById("click-button");
+    const clicktip = document.getElementById("click-tooltip");
+
+    click.addEventListener(
+      "mouseover",
+      () => {
+        clicktip.style.display = "block";
+      },
+      false
+    );
+
+    click.addEventListener(
+      "mouseleave",
+      () => {
+        clicktip.style.display = "none";
+      },
+      false
+    );
+
+    const quiz = document.getElementById("quiz-button");
+    const quiztip = document.getElementById("quiz-tooltip");
+
+    quiz.addEventListener(
+      "mouseover",
+      () => {
+        quiztip.style.display = "block";
+      },
+      false
+    );
+
+    quiz.addEventListener(
+      "mouseleave",
+      () => {
+        quiztip.style.display = "none";
+      },
+      false
+    );
+
+    const data = document.getElementById("data-button");
+    const datatip = document.getElementById("data-tooltip");
+
+    data.addEventListener(
+      "mouseover",
+      () => {
+        datatip.style.display = "block";
+      },
+      false
+    );
+
+    data.addEventListener(
+      "mouseleave",
+      () => {
+        datatip.style.display = "none";
+      },
+      false
+    );
+
+    const contact = document.getElementById("contact-button");
+    const contacttip = document.getElementById("contact-tooltip");
+
+    contact.addEventListener(
+      "mouseover",
+      () => {
+        contacttip.style.display = "block";
+      },
+      false
+    );
+
+    contact.addEventListener(
+      "mouseleave",
+      () => {
+        contacttip.style.display = "none";
+      },
+      false
+    );
+
+    const nothing = document.getElementById("nothing-button");
+    const nothingtip = document.getElementById("nothing-tooltip");
+
+    nothing.addEventListener(
+      "mouseover",
+      () => {
+        nothingtip.style.display = "block";
+      },
+      false
+    );
+
+    nothing.addEventListener(
+      "mouseleave",
+      () => {
+        nothingtip.style.display = "none";
+      },
+      false
+    );
+
+    const audio = new Audio("keySound.wav");
+    const buttons = document.querySelectorAll("button");
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        audio.play();
+      });
+    });
+  </script>
+</html>
