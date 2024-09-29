@@ -88,10 +88,6 @@ button:hover.inactive {
 
 /* all pages */
 
-.home-button {
-    margin: 0%;
-}
-
 section {
     margin: 10px;
 }
@@ -117,7 +113,6 @@ h2 {
     width: 100px;
     height: 50px;
     margin: 10px 5px;
-
 }
 
 /* writing page */
@@ -206,4 +201,45 @@ fieldset {
         width: 50%;
         height: fit-content;
     }
+}
+
+/* contact page */ 
+
+#contact {
+    padding: 10px;
+    margin: 2% 35%;
+    width: fit-content;
+    height: fit-content;
+}
+
+#go-button {
+    width: 350px;
+    height: 50px;
+}
+
+textarea {
+    width: 350px;
+    min-width: 350px;
+    max-width: 350px;
+    height: 100px;
+    margin-top: 5px;
+    font-weight: 600;
+    font-size: 1.5rem;
+    background-color: lime;
+    border: 5px inset;
+    border-color: aliceblue;
+    padding: 5px;
+}
+
+input {
+    font-weight: 600;
+    font-size: 1.5rem;
+    background-color: lime;
+    border: 5px inset;
+    border-color: aliceblue;
+    padding: 5px;
+}
+
+.labels {
+    margin: 2px;
 }
