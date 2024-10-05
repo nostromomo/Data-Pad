@@ -48,8 +48,10 @@ const audio = new Audio("keySound.wav");
       false
     );
 
-    const cat = document.getElementById("cat-button");
-    const cattip = document.getElementById("cat-tooltip");
+
+    /* blog used to be cat page */
+    const cat = document.getElementById("blog-button");
+    const cattip = document.getElementById("blog-tooltip");
 
     cat.addEventListener(
       "mouseover",
